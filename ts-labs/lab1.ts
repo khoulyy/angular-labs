@@ -46,3 +46,12 @@ interface ApiResult<T> {
     message: string,
 }
 
+
+// Bonus: :)
+function printProductInfo(result: ApiResult<Product>): void {
+    if (result.success && result.data) {
+        console.log("Here is your data");
+    } else {
+        console.log("No data, sorry :(");
+    }
+}
