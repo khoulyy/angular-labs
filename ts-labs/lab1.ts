@@ -40,17 +40,9 @@ const result = wrapValue([5,3]);
 console.log(result);
 
 // Q5
-interface Box<T> {
-    content: T;
-    getContent(): T;
+interface ApiResult<T> {
+    data: T,
+    success: Boolean,
+    message: string,
 }
 
-const numberBox: Box<number> = {
-    content: 42,
-    getContent() {
-        return this.content;
-    }
-}
-
-console.log(numberBox.content);
-console.log(numberBox.getContent());
